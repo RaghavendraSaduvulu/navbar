@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+const navbarItem = [
+  "File",
+  "Edit",
+  "Format",
+  "View",
+  "History",
+  "Book",
+  "Tools",
+  "Help",
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <h1 className="heading">Dropdown</h1>
+      <div className="navbar">
+        {navbarItem.map((item) => (
+          <button type="button" className="nav-item">
+            {item}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
